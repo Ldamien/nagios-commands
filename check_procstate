@@ -1,0 +1,19 @@
+#renvoie si le processus est en train de tourner ou non
+
+./check_nt -H $HOSTADDRESS$ -s password -p 12489 -v PROCSTATE -d SHOWALL -l $ARG1$,$ARG2$ 
+
+#$ARG1$ et $ARG2$ representent les processus à verifier
+
+#exemple
+
+./check_nt -H $HOSTADDRESS$ -s password -p 12489 -v PROCSTATE -d SHOWALL -l notepad.exe
+
+#réponse 
+
+ notepad.exe: Running
+
+
+
+
+
+
