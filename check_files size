@@ -1,0 +1,5 @@
+#renvoie la liste des fichiers dans un dossier ainsi que leur tailles respectives
+./check_nrpe -H 172.16.252.84 -c check_files -a path='C:\\test' pattern=*.txt "detail-syntax=%(filename): %(size)" "warn=size>20k" "critical=count=0" max-depth=1
+
+#réponse s'il y a 3 fichiers vides dans le dossier
+OK: All 3 files are ok|'1.txt size'=0KB;20;0 '2.txt size'=0KB;20;0 '3.txt size'=0KB;20;0 'count'=3;0;0
