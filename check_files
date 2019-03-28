@@ -1,0 +1,14 @@
+#revoie le nombre total de fichier dans un dossier defini, critique s'il y a plus de 3 fichiers, warning s'il y'en a plus de 2
+
+./check_nrpe -H 172.16.252.84 -c check_files -a path='C:\\test' pattern=*.* 'warning=count>2' 'critical=count>3' top-syntax='${status}: ${count} files found' 'empty-state=ok'
+
+#reponse s'il y a 4 fichiers dans le dossier
+CRITICAL: 4 files found|'count'=4;2;3
+
+#reponse s'il y a 3 fichiers dans le dossier
+WARNING: 3 files found|'count'=3;2;3
+
+#reponse s'il y a 2 fichiers
+OK: All 2 files are ok|'count'=2;2;3
+
+
