@@ -1,0 +1,9 @@
+#renvoie si le fichier et existant ou non
+
+./check_nrpe -H $HOSTADDRESS$ -c check_files -a path='C:\\Dossier\Ficher.extension' 'warn= count < 1' 'crit= count < 1' top-syntax='${status}: ${count} files found ${problem_list}' 'empty-state=critical' show-all
+
+#réponse
+
+OK: 1 files found Fichier.txt|'count'=1;1;1
+
+
