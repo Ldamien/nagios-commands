@@ -1,4 +1,4 @@
-#renvoie si le fichier est vide ou non
+#renvoie si le dossier est vide ou non
 
 ./check_nrpe -H $HOSTADDRESS$ -c check_files -a path='C:\\Dossier' pattern=*.* 'warning=count>0' 'critical=count>0' top-syntax='${status}: ${count} files found' 'empty-state=ok'
 
